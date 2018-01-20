@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Sistema"          
+             x:tabIndicatorColor="#000000"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Tipo de documento-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,20,50,0" >
+                <Label Text="Tipo de Documento" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoDocumento}"  x:Name="TipoDocumento" IsVisible="False"
+                SelectedIndexChanged="TipoDocumento_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>01 - SOLICITUD</x:String>
+                        <x:String>02 - NOTA</x:String>
+                        <x:String>03 - ORDEN DE COMPRA</x:String>
+                        <x:String>04 - VERBAL</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoDocumentoLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoDocumentoLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!--Tipo de orden-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,5,50,0">
+                <Label Text="Tipo de Orden" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoOrden}" x:Name="TipoOrden" IsVisible="False"
+                SelectedIndexChanged="TipoOrden_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>01 - NUEVO</x:String>
+                        <x:String>02 - MODIFICACION</x:String>
+                        <x:String>03 - ERROR</x:String>
+                        <x:String>04 - REINSTALACION</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoOrdenLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoOrdenLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!--Tipo de recepcion-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,5,50,0">
+                <Label Text="Tipo Recepción" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoRecepcion}" x:Name="TipoRecepcion" IsVisible="False"
+                SelectedIndexChanged="TipoRecepcion_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>01 - EMAIL</x:String>
+                        <x:String>02 - FAX</x:String>
+                        <x:String>03 - DOC.FISICO</x:String>
+                        <x:String>04 - DOC.INTERNO</x:String>
+                        <x:String>05 - VERBAL</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoRecepcionLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoRecepcionLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!--Tipo de servicio-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,5,50,0">
+                <Label Text="Tipo de Servicio" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoServicio}" x:Name="TipoServicio" IsVisible="False"
+                SelectedIndexChanged="TipoServicio_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>01 - MANTENIMIENTO</x:String>
+                        <x:String>02 - NUEVO PROYECTO</x:String>
+                        <x:String>03 - INVESTIGACION</x:String>
+                        <x:String>04 - REINSTALACION</x:String>
+                        <x:String>05 - CAPACITACION</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoServicioLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoServicioLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!--Tipo de ajuste-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,5,50,0">
+                <Label Text="Tipo de Ajuste" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoAjuste}" x:Name="TipoAjuste" IsVisible="False"
+                SelectedIndexChanged="TipoAjuste_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>01 - REPORTE</x:String>
+                        <x:String>02 - PANTALLA</x:String>
+                        <x:String>10 - GENERAR ARCHIVO</x:String>
+                        <x:String>12 - ELIMINAR DATOS</x:String>
+                        <x:String>13 - MODIFICAR DATOS</x:String>
+                        <x:String>14 - IMPORTAR DATOS</x:String>
+                        <x:String>13 - RUTINA CALCULO</x:String>
+                        <x:String>NA - No Aplica</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoAjusteLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoAjusteLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!--Tipo de sistema-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,4,50,0">
+                <Label Text="Tipo de sistema" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                <Picker SelectedIndex="{Binding TipoSistema}" x:Name="TipoSistema" IsVisible="False"
+                SelectedIndexChanged="TipoSistema_OnSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>NAA - No Aplica</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="TipoSistemaLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TipoSistemaLabel_OnTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

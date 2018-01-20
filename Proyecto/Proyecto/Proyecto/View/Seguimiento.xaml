@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Proyecto.View"
+             x:Class="Proyecto.View.Seguimiento"
+             NavigationPage.HasNavigationBar="False">
+    <NavigationPage Title="SECCIÓN 1" NavigationPage.BarBackgroundColor="Black">
+        <x:Arguments>
+            <pages:Seccion1/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="SECCIÓN 2" >
+        <x:Arguments>
+            <pages:Seccion2/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

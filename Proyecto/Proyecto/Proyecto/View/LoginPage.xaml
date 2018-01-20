@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.LoginPage"
+             xmlns:Conv="clr-namespace:Proyecto.Converter"
+             BackgroundColor="#162f67">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Conv:DenyExpressionsConverter x:Key="DenyExpressionsConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout VerticalOptions="CenterAndExpand" >
+        <StackLayout Padding="80,0" HorizontalOptions="FillAndExpand">
+            <!--Usuario-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image x:Name="Usuario" VerticalOptions="Center" Source="Usuario.png" HeightRequest="28" WidthRequest="28"/>
+                <Entry Placeholder="Usuario" Text="{Binding User}" HorizontalOptions="FillAndExpand"  TextColor="White"/>
+            </StackLayout>
+            <!--password-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image x:Name="Password" VerticalOptions="Center" Source="Password.png" HeightRequest="28" WidthRequest="28"/>
+                <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" HorizontalOptions="FillAndExpand" TextColor="#009688"/>
+            </StackLayout>
+        </StackLayout>
+        <!--boton de login-->
+        <StackLayout Padding="120,0" HorizontalOptions="FillAndExpand" >
+            <Button Text="Ingresar" Command="{Binding LoginCommand}" BackgroundColor="#11a7d8" HorizontalOptions="FillAndExpand" TextColor="White" Margin="0,30"/>
+        </StackLayout>
+        <!--Check Recordar-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Image Source="Check.png" IsVisible="{Binding Checked}" VerticalOptions="Center" HeightRequest="25" WidthRequest="25" />
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectCurrencyCommand}" CommandParameter="Local"/>
+                    </Image.GestureRecognizers>
+                <Image Source="Uncheck.png" IsVisible="{Binding Checked, Converter={StaticResource DenyExpressionsConverter}}" 
+                       VerticalOptions="Center" HeightRequest="25" WidthRequest="25">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectCurrencyCommand}" CommandParameter="Local"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Recordarme" TextColor="Gray" HorizontalOptions="Center" FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,8 @@
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Debug\ACCESODATOS.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Debug\ACCESODATOS.pdb
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Debug\FramNet.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Debug\ACCESODATOS.csprojResolveAssemblyReference.cache
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Debug\ACCESODATOS.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Debug\ACCESODATOS.pdb

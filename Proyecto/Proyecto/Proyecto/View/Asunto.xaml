@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Asunto"             
+             x:tabIndicatorColor="#000000"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="True">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Numero de Orden" FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Text="{Binding AsuntoModel.NumeroOrden}" Placeholder="Numero de Orden"  
+                       HorizontalOptions="FillAndExpand" Completed="EntryOrden_Completed" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,10,50,0">
+                <Label Text="Fecha"  FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <DatePicker Date="{Binding Fecha}" BackgroundColor="White" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,10,50,0">
+                <Label Text="No Orden Cliente"  FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Text="{Binding AsuntoModel.NumOrdCliente}" Placeholder="No Orden Cliente"  
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,10,50,0">
+                <Label Text="Cliente" FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Text="{Binding AsuntoModel.Cliente}" Placeholder="Cliente" 
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,10,50,0">
+                <Label Text="Asunto"  FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Text="{Binding AsuntoModel.Asunto}" Placeholder="Asunto" 
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

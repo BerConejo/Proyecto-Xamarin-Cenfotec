@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Seccion2"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout  HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Carpeta de Trabajo" FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Placeholder="Carpeta de Trabajo" Text="{Binding CarpetaTrabajo}"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Archivos Modificados"  FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Placeholder="Archivos Modificados" Text="{Binding ArchivosModificados}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Campos Modificados (BD)" FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Placeholder="Campos Modificados (BD)" Text="{Binding CamposModificados}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Observaciones"  FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Placeholder="Observaciones" Text="{Binding Observaciones}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <!--boton de agregar-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="5,0,0,0">
+                <Label Text="Adjuntar Datos"  FontSize="Large" TextColor="Gray" FontAttributes="None" HorizontalOptions="Start"/>
+                <Button x:Name="Agregar" Image="agregar.png" Command="{Binding AdjuntarCommand}"  HeightRequest="50" WidthRequest="50" HorizontalOptions="End" BackgroundColor="WhiteSmoke" />
+            </StackLayout>
+            <!--boton de guardar-->
+            <StackLayout Padding="120,0" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
+                <Button Text="GUARDAR" Command="{Binding GuardarCommand}" BackgroundColor="#7b8d93" HorizontalOptions="FillAndExpand" TextColor="White" Margin="0,30" VerticalOptions="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Archivos"
+             x:Class="Proyecto.View.Archivos"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <!--Lista de archivos-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="5,10,0,0">
+                <ListView x:Name="lstArchivo"
+                    ItemsSource="{Binding lstArchivo}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Archivo}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!--botones de agregar y eliminar-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5,0,0,0">
+                <Button x:Name="agregar" Image="agregar.png" Command="{Binding AgregarCommand}" HeightRequest="50" WidthRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="WhiteSmoke"  />
+                <!--<Label Text="                "/>
+                <Button  Image="eliminar.png" Command="{Binding EliminarCommand}" HeightRequest="50" WidthRequest="50" HorizontalOptions="CenterAndExpand" BackgroundColor="WhiteSmoke"/>-->
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5,0,0,0">
+                <Label Text=" Agregar" FontSize="Large" TextColor="Gray" FontAttributes="Bold"/>
+                <!--<Label Text="           "/>
+                <Label Text="Eliminar" FontSize="Large" TextColor="Gray" FontAttributes="Bold"/>-->
+            </StackLayout>
+            <!--boton de guardar-->
+            <!--<StackLayout Padding="120,0" HorizontalOptions="FillAndExpand" >-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5,0,0,0">
+                <Button Text="GUARDAR" Command="{Binding GuardarCommand}" BackgroundColor="#7b8d93" HeightRequest="70" WidthRequest="140" HorizontalOptions="CenterAndExpand" TextColor="White" Margin="0,30"/>
+
+                <Button Text="ELIMINA ORDEN" Command="{Binding EliminaOrdenCommand}" BackgroundColor="#7b8d93" HeightRequest="50"  WidthRequest="140"  HorizontalOptions="CenterAndExpand" TextColor="White" Margin="0,30"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

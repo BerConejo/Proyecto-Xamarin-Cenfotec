@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfCorrespondencia", "wcfCorrespondencia\wcfCorrespondencia.csproj", "{3084DC5C-0DAD-4AB0-89BF-79CF09A59E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACCESODATOS", "ACCESODATOS\ACCESODATOS.csproj", "{732247D8-F542-4269-B4A8-4790311FA380}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3084DC5C-0DAD-4AB0-89BF-79CF09A59E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3084DC5C-0DAD-4AB0-89BF-79CF09A59E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3084DC5C-0DAD-4AB0-89BF-79CF09A59E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3084DC5C-0DAD-4AB0-89BF-79CF09A59E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732247D8-F542-4269-B4A8-4790311FA380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732247D8-F542-4269-B4A8-4790311FA380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732247D8-F542-4269-B4A8-4790311FA380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732247D8-F542-4269-B4A8-4790311FA380}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

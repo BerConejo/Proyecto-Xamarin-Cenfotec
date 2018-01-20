@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.ImagenView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Imagen}" HeightRequest="600" WidthRequest="600">
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

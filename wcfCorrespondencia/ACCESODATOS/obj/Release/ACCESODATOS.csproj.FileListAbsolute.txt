@@ -1,0 +1,15 @@
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\bin\Release\ACCESODATOS.dll
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\bin\Release\ACCESODATOS.pdb
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\bin\Release\FramNet.dll
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\bin\Release\Newtonsoft.Json.dll
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\bin\Release\Newtonsoft.Json.xml
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\obj\Release\ACCESODATOS.csprojResolveAssemblyReference.cache
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\obj\Release\ACCESODATOS.dll
+C:\PROYECTO\PUNTONET\wcfCorrespondencia\JSON\obj\Release\ACCESODATOS.pdb
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Release\ACCESODATOS.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Release\ACCESODATOS.pdb
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Release\Newtonsoft.Json.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\bin\Release\Newtonsoft.Json.xml
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Release\ACCESODATOS.csprojResolveAssemblyReference.cache
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Release\ACCESODATOS.dll
+C:\Users\bbogantes\Documents\Visual Studio 2015\Projects\wcfCorrespondencia\ACCESODATOS\obj\Release\ACCESODATOS.pdb

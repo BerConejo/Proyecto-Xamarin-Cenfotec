@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Seccion1"             
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+            <!--Grid 1-->
+            <StackLayout Orientation="Horizontal">
+                <Grid ColumnSpacing="20" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="AUTO" />
+                        <ColumnDefinition Width="AUTO" />
+                    </Grid.ColumnDefinitions>
+                    <!--Primera fila LABELS-->
+                    <Label Text="Numero de Orden" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  />
+                    <Label Text="Analista" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="0" Grid.Column="1"  HorizontalOptions="Center"  />
+                    <!--Segunda fila ENTRYS-->
+                    <Entry Placeholder="Num.Orden" Text="{Binding NumBoleta}"   Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" TextColor="DarkGray" />
+                    <Entry Placeholder="Analista"  Text="{Binding Analista}"  Grid.Row="1" Grid.Column="1"  HorizontalOptions="FillAndExpand" TextColor="DarkGray"/>
+                    <!--Tercera fila LABELS-->
+                    <Label Text="Hora de Inicio" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="2" Grid.Column="0"   HorizontalOptions="Center" />
+                    <Label Text="Hora Fin" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="2" Grid.Column="1"  HorizontalOptions="Center" />
+                    <!--Cuarta fila ENTRYS-->
+                    <TimePicker  Time="{Binding HoraInicio}" Format="HH:mm" Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" TextColor="DarkGray"/>
+                    <TimePicker  Time="{Binding HoraFin}"  Format="HH:mm" Grid.Row="3" Grid.Column="1"  HorizontalOptions="FillAndExpand" TextColor="DarkGray"/>
+                </Grid>
+            </StackLayout>
+            <!--PICKERS-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <!--Lugar de asistencia-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,10,50,0" >
+                    <Label Text="Lugar de asistencia" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker x:Name="LugarAsistencia" ItemDisplayBinding="{Binding LugarAsistencia}" IsVisible="False"
+                SelectedIndexChanged="LugarAsistencia_OnSelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>01 - DESA.INTERNO</x:String>
+                            <x:String>02 - REMOTO</x:String>
+                            <x:String>03 - EMAIL</x:String>
+                            <x:String>04 - VISITA A CLIENTE</x:String>
+                            <x:String>05 - CLIENTE VINO</x:String>
+                            <x:String>06 - TELEFONO</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="LugarAsistenciaLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LugarAsistenciaLabel_OnTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <!--Estado de Orden-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,10,50,0" >
+                    <Label Text="Estado de Orden" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Picker x:Name="EstadoOrden" ItemDisplayBinding="{Binding EstadoOrden}" IsVisible="False"
+                SelectedIndexChanged="EstadoOrden_OnSelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>01 - ESPERA DOC</x:String>
+                            <x:String>02 - EN PROCESO</x:String>
+                            <x:String>03 - EN REVISION</x:String>
+                            <x:String>04 - CONCLUIDA</x:String>
+                            <x:String>05 - CANCELADA</x:String>
+                            <x:String>06 - REABIERTA</x:String>
+                            <x:String>07 - PRUEBAS CLIENTE</x:String>
+                            <x:String>08 - DOC RECIBIDO CLIENTE</x:String>
+                            <x:String>09 - ESPERA AUTORI CLIEN</x:String>
+                            <x:String>10 - AUTORIZA CLIENTE</x:String>
+                            <x:String>11 - ORD TRANSFERIDA</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="EstadoOrdenLabel" Text="Tap para seleccionar un opción"
+               FontSize="Default" FontAttributes="Bold" HorizontalOptions="FillAndExpand" TextColor="Gray">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EstadoOrdenLabel_OnTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <!--Grid 2-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand"  Padding="5,10,50,0">
+                <StackLayout Orientation="Horizontal">
+                    <Grid ColumnSpacing="20" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="AUTO" />
+                            <ColumnDefinition Width="AUTO" />
+                        </Grid.ColumnDefinitions>
+                        <!--Primera fila LABELS-->
+                        <Label Text="Versión" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  />
+                        <Label Text="Fecha" FontSize="16" TextColor="Black" FontAttributes="None" Grid.Row="0" Grid.Column="1"  HorizontalOptions="Center"  />
+                        <!--Segunda fila DatePicker-->
+                        <Entry Placeholder="Versión"  Text="{Binding Version}"  Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" TextColor="DarkGray" />
+                        <DatePicker BackgroundColor="White" Date="{Binding Fecha}" Grid.Row="1" Grid.Column="1"  HorizontalOptions="FillAndExpand" TextColor="DarkGray"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+            <!--Final de Pantalla-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,5,50,0">
+                <Label Text="Numero de Orden Transferida" FontSize="Default" TextColor="Black" FontAttributes="None"/>
+                <Entry Placeholder="Numero de Orden Transferida" Text="{Binding OrdenTransferida}" HorizontalOptions="FillAndExpand" TextColor="DimGray"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

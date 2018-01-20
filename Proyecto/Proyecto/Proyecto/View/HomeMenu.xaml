@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.HomeMenu"
+             x:Name="HomeMenu"
+             Title="Master"
+             BackgroundColor="#fafafa">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout HeightRequest="65" WidthRequest="5" BackgroundColor="#3e91a3">
+                <BoxView Color="#3e91a3"/>
+            </StackLayout>
+            <ListView x:Name="lstMenuDesplegable"
+                  ItemsSource="{Binding lstMenuDesplegable}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.SeleccionaPaginaCommand, Source={x:Reference HomeMenu}}" CommandParameter="{Binding ID}"/>
+                                </StackLayout.GestureRecognizers>
+                                <Image x:Name="imgStart" HorizontalOptions="Start" VerticalOptions="Center" Source="{Binding IconBegin}" HeightRequest="28" WidthRequest="28"/>
+                                <Label Text="{Binding Title}" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black" FontSize="Medium"/>
+                                <Image x:Name="imgEnd" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="{Binding IconEnd}" HeightRequest="28" WidthRequest="28"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
